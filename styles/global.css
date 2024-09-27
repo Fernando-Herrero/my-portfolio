@@ -13,6 +13,13 @@ body {
 h1, h2, h3 {
     font-family: "EB Garamond", Helvetica, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+    color: var(--text-color);
+}
+
+p {
+    color: var(--contrast-color);
+    line-height: 24px;
 }
 
 h1,
@@ -39,8 +46,8 @@ ul {
 }
 
 a {
-	color: inherit;
 	text-decoration: none;
+    color: var(--contrast-color);
 }
 
 :root {
@@ -58,4 +65,88 @@ body {
 .container {
 	width: var(--container-width);
 	margin: 0 auto;
+}
+
+/*navbar*/
+.main-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    position: relative;
+}
+
+.hamburguer-icon {
+	width: 32px;
+}
+
+.menu-hamburguer-container div {
+	display: none;
+}
+
+.menu-hamburguer-container input:checked ~ div {
+	display: flex;
+    flex-direction: column;
+    background-color: var(--bg-color);
+    color: var(--contrast-color);
+    line-height: 2;
+    position: absolute;
+    /* right: 0; */
+    /* height: calc(100vh - 56px); */
+    width: 200px;
+    z-index: 100;
+}    
+
+.menu-hamburguer-container input {
+	display: none;
+}
+
+/*header*/
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+    margin-top: 40px;
+}
+
+.profile-picture {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.profile-picture img {
+    width: 100%;
+    transform: translatey(-30px);
+}
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.contact-me {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.get-in-touch {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: rgb(192, 192, 192, 0.2);
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid var(--text-color);
+}
+
+.contact-icons {
+    font-size: x-large;
 }
