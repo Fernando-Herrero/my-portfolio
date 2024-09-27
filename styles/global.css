@@ -81,22 +81,27 @@ body {
 	width: 32px;
 }
 
-.menu-hamburguer-container div {
+.menu-hamburguer-container ul {
 	display: none;
 }
 
-.menu-hamburguer-container input:checked ~ div {
+.menu-hamburguer-container input:checked ~ ul {
 	display: flex;
     flex-direction: column;
+    padding-left: 80vw;
     background-color: var(--bg-color);
     color: var(--contrast-color);
     line-height: 2;
     position: absolute;
-    /* right: 0; */
-    /* height: calc(100vh - 56px); */
-    width: 200px;
+    right: 0;
+    height: calc(100vh - 36px);
+    width: 100vw;
     z-index: 100;
 }    
+
+.menu-hamburguer-container input:checked ~li {
+    width: 100px;
+}
 
 .menu-hamburguer-container input {
 	display: none;
