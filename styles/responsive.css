@@ -57,6 +57,28 @@
 		--container-width: 75%;
 	}
 
+    .menu-hamburguer-container {
+        display: none;
+    }
+
+    .ancors-icons-nav {
+        display: flex;
+        align-items: center;
+        gap: 44px;
+    }
+
+    .ancors-main-navbar {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .icons-main-navbar {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+
     .header-text {
         flex: 2;
         justify-content: space-between;
