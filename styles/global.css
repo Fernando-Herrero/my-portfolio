@@ -322,3 +322,48 @@ body {
 	gap: 16px;
 }
 
+/*contact*/
+.connect {
+	border-bottom: none;
+}
+
+
+.connect-title {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.connect-icons {
+	display: flex;
+	justify-content: center;
+	gap: 16px;
+}
+
+.connect-contact {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	text-align: left;
+}
+
+.connect-contact p {
+	color: var(--text-color);
+}
+
+.connect-contact input, .connect-contact textarea {
+	background-color: var(--contrast-color);
+	width: 100%;
+}
+
+.connect-contact button {
+	color: var(--text-color);
+	background-color: rgb(192, 192, 192, 0.2);
+	padding: 8px;
+	border-radius: 8px;
+	border: 1px solid var(--text-color);
+	margin-top: 16px;
+}
+
+
+
