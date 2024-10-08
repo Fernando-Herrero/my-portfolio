@@ -222,7 +222,7 @@ body {
 }
 
 /*projects*/
-.projects-section {
+.main-section {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -274,17 +274,6 @@ body {
 }
 
 /*experience*/
-.experience-section {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	text-align: center;
-	gap: 32px;
-	margin-top: 40px;
-	padding-bottom: 40px;
-	border-bottom: 1px solid var(--contrast-color);
-}
-
 .experience {
 	display: flex;
 	flex-direction: column;
@@ -306,5 +295,30 @@ body {
 .experience-title img {
 	width: 80px;
 	border-radius: 50%;
+}
+
+/*skills*/
+.skills-section {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: xx-large;
+	gap: 16px;
+	margin-top: 40px;
+	padding-bottom: 40px;
+	border-bottom: 1px solid var(--contrast-color);
+}
+
+/*about-me*/
+.about-me-profile {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.about-me-links {
+	display: flex;
+	justify-content: center;
+	gap: 16px;
 }
 
