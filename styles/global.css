@@ -21,6 +21,18 @@ h3 {
 	color: var(--text-color);
 }
 
+h1 {
+	font-size: 36px;
+}
+
+h2 {
+	font-size: 28px;
+}
+
+h3 {
+	font-size: 24px;
+}
+
 p {
 	color: var(--contrast-color);
 	line-height: 24px;
@@ -92,7 +104,8 @@ body {
 .menu-hamburguer-container input:checked ~ ul {
 	display: flex;
 	flex-direction: column;
-	padding-left: 80vw;
+	align-items: flex-end;
+	padding: 0;
 	background-color: var(--bg-color);
 	color: var(--contrast-color);
 	line-height: 2;
@@ -101,6 +114,10 @@ body {
 	height: calc(100vh - 36px);
 	width: 100vw;
 	z-index: 100;
+}
+
+.menu-hamburguer-container li {
+	width: 84px;
 }
 
 .menu-hamburguer-container input:checked ~ li {
@@ -119,6 +136,8 @@ body {
 	text-align: center;
 	gap: 8px;
 	margin-top: 40px;
+	padding-bottom: 40px;
+	border-bottom: 1px solid var(--contrast-color);
 }
 
 .profile-picture {
@@ -149,7 +168,7 @@ body {
 .header-text {
 	display: flex;
 	flex-direction: column;
-	gap: 8px;
+	gap: 20px;
 }
 
 .contact-me {
@@ -167,6 +186,12 @@ body {
 	padding: 8px;
 	border-radius: 8px;
 	border: 1px solid var(--text-color);
+}
+
+.get-in-touch:hover {
+	transform: scale(1.1);
+	transition-duration: 0.5s;
+	transition-timing-function: ease-in-out;
 }
 
 .contact-icons {
@@ -195,3 +220,91 @@ body {
 		transform: scale(1);
 	}
 }
+
+/*projects*/
+.projects-section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	gap: 32px;
+	margin-top: 40px;
+	padding-bottom: 40px;
+	border-bottom: 1px solid var(--contrast-color);
+}
+
+.projects {
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+}
+
+.project {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	padding: 16px;
+	border: 1px solid var(--contrast-color);
+	border-radius: 8px;
+}
+
+.project-picture {
+	line-height: 0;
+}
+
+.project-picture img {
+	width: 100%;
+}
+
+.project-text {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.ancors-github-project {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 16px;
+}
+
+.ancors-github-project p {
+	text-decoration: underline;
+}
+
+/*experience*/
+.experience-section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	gap: 32px;
+	margin-top: 40px;
+	padding-bottom: 40px;
+	border-bottom: 1px solid var(--contrast-color);
+}
+
+.experience {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.experience-title-date {
+	display: flex;
+	flex-direction: column;
+}
+
+.experience-title {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 16px;
+}
+
+.experience-title img {
+	width: 80px;
+	border-radius: 50%;
+}
+
