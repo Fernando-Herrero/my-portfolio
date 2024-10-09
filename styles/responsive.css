@@ -3,6 +3,18 @@
 		--container-width: 85%;
 	}
 
+    h1 {
+        font-size: 42px;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+
+    h3 {
+        font-size: 32px;
+    }
+
 	.menu-hamburguer-container input:checked ~ ul {
 		padding-left: 90vw;
 	}
@@ -36,10 +48,12 @@
     .profile-picture img {
         width: 100%;
         transform: translatey(0px);
+        filter: blur(10px);
     }
 
     .header-text {
         flex: 1;
+        gap: 36px;
     }
 
     .contact-me {
@@ -48,7 +62,82 @@
         justify-content: flex-start;
         gap: 16px;
     }
-    
+
+    /*project*/
+.main-section {
+    align-items: flex-start;
+    gap: 42px;
+}
+
+    .project {
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+    }
+
+    .project-picture {
+        flex: 4;
+    }
+
+    .project-text {
+        flex: 6;
+    }    
+
+    .ancors-github-project {
+        justify-content: flex-start;
+    }
+
+    /*experience*/
+    .experience {
+        text-align: left;
+        padding-left: 15%;
+    }
+
+    .experience-title-date {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .experience-title {
+        flex-direction: row;
+    }
+
+    .experience-title img {
+        width: 28px;
+    }
+
+    /*skills*/
+    .skills-section {
+        justify-content: space-between;
+        font-size: xxx-large;
+    }
+
+    /*aboutme*/
+    .about-me-profile {
+        text-align: left;
+        padding-left: 15%;
+    }
+
+    /*connect*/
+    .connect-title-icons {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .connect-title {
+        align-items: flex-start;
+    }
+
+    .connect-contact {
+        width: 100%;
+    }
+
+    .connect-contact button {
+        align-self: flex-start;
+        width: 35%;
+    }
 }
 
 /* Media query para dispositivos de escritorio (mayores a 1024px y hasta 1439px) */

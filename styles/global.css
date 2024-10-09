@@ -254,6 +254,7 @@ body {
 
 .project-picture img {
 	width: 100%;
+	border-radius: 8px;
 }
 
 .project-text {
@@ -271,6 +272,7 @@ body {
 
 .ancors-github-project p {
 	text-decoration: underline;
+	color: #8bfc77;
 }
 
 /*experience*/
@@ -283,6 +285,7 @@ body {
 .experience-title-date {
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 }
 
 .experience-title {
@@ -295,6 +298,10 @@ body {
 .experience-title img {
 	width: 80px;
 	border-radius: 50%;
+}
+
+.experience-title p {
+	color: var(--text-color);
 }
 
 /*skills*/
@@ -327,6 +334,11 @@ body {
 	border-bottom: none;
 }
 
+.connect-title-icons {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
 
 .connect-title {
 	display: flex;
@@ -340,7 +352,7 @@ body {
 	gap: 16px;
 }
 
-.connect-contact {
+.connect-contact form {
 	display: flex;
 	flex-direction: column;
 	gap: 8px;
@@ -365,5 +377,19 @@ body {
 	margin-top: 16px;
 }
 
+/*footer*/
+.footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
+
+.icons-footer {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
 
 
