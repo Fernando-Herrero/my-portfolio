@@ -9,6 +9,8 @@ body {
 	font-family: "Libre Caslon Text", Helvetica, -apple-system, BlinkMacSystemFont,
 		"Segoe UI", Roboto, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
 		"Segoe UI Symbol";
+
+	scroll-behavior: smooth;	
 }
 
 h1,
@@ -88,9 +90,13 @@ body {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin-top: 12px;
-	margin-bottom: 12px;
-	position: relative;
+	position: fixed;
+    top: 16px;
+    padding: 12px 24px;
+    border-radius: 50px;
+    z-index: 100;
+    backdrop-filter: blur(20px);
+	background-color: rgba(255, 255, 255, 0.2);
 }
 
 .hamburguer-icon {
@@ -135,7 +141,7 @@ body {
 	align-items: center;
 	text-align: center;
 	gap: 8px;
-	margin-top: 40px;
+	margin-top: 120px;
 	padding-bottom: 40px;
 	border-bottom: 1px solid var(--contrast-color);
 }
@@ -250,11 +256,13 @@ body {
 
 .project-picture {
 	line-height: 0;
+	max-height: 600px;
 }
 
 .project-picture img {
-	width: 100%;
+	max-width: 100%;
 	border-radius: 8px;
+	max-height: 600px;
 }
 
 .project-text {
@@ -361,11 +369,23 @@ body {
 
 .connect-contact p {
 	color: var(--text-color);
+	font-size: 18px;
 }
 
 .connect-contact input, .connect-contact textarea {
 	background-color: var(--contrast-color);
 	width: 100%;
+	border: none;
+    outline: none;
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-size: 18px;
+    color: darkslategray;
+	font-family: monospace;
+}
+
+.connect-contact textarea {
+	border-radius: 20px;
 }
 
 .connect-contact button {
@@ -375,6 +395,10 @@ body {
 	border-radius: 8px;
 	border: 1px solid var(--text-color);
 	margin-top: 16px;
+}
+
+.big-letter {
+	font-size: 42px;
 }
 
 /*footer*/

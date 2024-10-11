@@ -20,7 +20,7 @@
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
 		/>
 		<link rel="stylesheet" href="/styles/index.css" />
-		<title>FHN-Developer</title>
+		<title>FHN Developer</title>
 	</head>
 	<body>
 		<nav class="main-navbar container">
@@ -67,7 +67,7 @@
 			</div>
 			<div class="ancors-icons-nav">
 				<div class="ancors-main-navbar">
-					<a href="#proyects">Proyectos</a>
+					<a href="#projects">Proyectos</a>
 					<a href="#experience">Experienccia</a>
 					<a href="#skills">Habilidades</a>
 					<a href="#about">Sobre mi</a>
@@ -180,7 +180,7 @@
 		</header>
 
 		<main>
-			<section class="main-section container">
+			<section id="projects" class="main-section container">
 				<h2>PROJECTS</h2>
 
 				<section class="projects">
@@ -219,7 +219,7 @@
 				</section>
 			</section>
 
-			<section class="main-section container">
+			<section id="experience" class="main-section container">
 				<h2>EXPERIENCE</h2>
 
 				<div class="experience">
@@ -243,7 +243,7 @@
 				</div>
 			</section>
 
-			<section class="skills-section container">
+			<section id="skills" class="skills-section container">
 				<i class="fa-brands fa-html5" style="color: #c0c0c0"></i>
 				<i class="fa-brands fa-css3-alt" style="color: #c0c0c0"></i>
 				<i class="fa-brands fa-js" style="color: #c0c0c0"></i>
@@ -252,11 +252,11 @@
 				<i class="fa-brands fa-github" style="color: #c0c0c0"></i>
 			</section>
 
-			<section class="main-section container">
+			<section id="about" class="main-section container">
 				<h2>ABOUT ME</h2>
 
 				<div class="about-me-profile">
-					<h3>Junior Full Stak Developer</h3>
+					<h3>Junior Full Stack Developer</h3>
 					<p>
 						With over 5 years living abroad , I have developed a strong skill
 						set in self-improvement. This passion to surpass myself drives me to
@@ -289,48 +289,31 @@
 			</section>
 
 			<section class="main-section connect container">
-				<div class="connect-title-icons">
-					<div class="connect-title">
-						<h2>Do you have any projects?</h2>
-						<h2>Let's work together</h2>
-					</div>
-
-					<div class="connect-icons">
-						<a href="https://www.linkedin.com/in/fernando-herrero-nunez/">
-							<i
-								class="contact-icons fa-brands fa-linkedin"
-								style="color: #8bfc77"
-							></i>
-						</a>
-						<a href="https://github.com/Fernando-Herrero">
-							<i
-								class="contact-icons fa-brands fa-github"
-								style="color: #8bfc77"
-							></i>
-						</a>
-					</div>
+				<div class="connect-title">
+					<h2 class="big-letter">Do you have any projects?</h2>
+					<h2 class="big-letter">Let's work together</h2>
 				</div>
 
 				<div class="connect-contact">
 					<form action="#">
 						<p>Name</p>
 						<label>
-							<input type="text" name="name" required />
+							<input type="text" name="name" placeholder="John Doe" required />
 						</label>
 
 						<p>Email</p>
 						<label>
-							<input type="email" name="email" required />
+							<input type="email" placeholder="johndoe@gmail.com" name="email" required />
 						</label>
 
 						<p>Subject</p>
 						<label>
-							<input type="text" name="subject" required />
+							<input type="text" placeholder="I want to hire you" name="subject" required />
 						</label>
 
 						<p>Message</p>
 						<label>
-							<textarea name="message" rows="20"></textarea>
+							<textarea name="message" placeholder="Write here your message..." rows="10"></textarea>
 						</label>
 
 						<button type="submit">Contact</button>

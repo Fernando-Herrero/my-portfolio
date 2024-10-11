@@ -1,4 +1,4 @@
-@media (min-width: 481px) {
+@media (min-width: 700px) {
 	:root {
 		--container-width: 85%;
 	}
@@ -13,6 +13,11 @@
 
     h3 {
         font-size: 32px;
+    }
+
+    .main-navbar {
+        right: 16px;
+        left: 16px;
     }
 
 	.menu-hamburguer-container input:checked ~ ul {
@@ -61,6 +66,10 @@
         align-items: center;
         justify-content: flex-start;
         gap: 16px;
+    }
+
+    .contact-icons {
+        font-size: xx-large;
     }
 
     /*project*/
@@ -132,11 +141,20 @@
 
     .connect-contact {
         width: 100%;
+        padding-left: 15%;
     }
 
     .connect-contact button {
         align-self: flex-start;
-        width: 35%;
+        width: 220px;
+    }
+
+    .connect-contact p {
+        font-size: 22px;
+    }
+
+    .big-letter {
+        font-size: 56px;
     }
 }
 
@@ -176,7 +194,7 @@
 
     .header {
         gap: 56px;
-        margin-top: 56px;
+        margin-top: 140px;
     }
 
     .header-text {
@@ -188,7 +206,20 @@
     .main-title {
         font-size: 44px;
     }
+
+    .project-picture {
+        max-height: 400px;
+    }
+
+    .project-picture img {
+        max-height: 400px;
+    }
+
+    .project-text {
+        flex: 8;
+    }
 }
+
 
 /* Media query para dispositivos de escritorio XXL (mayores a 1440px) */
 @media (min-width: 1440px) {
