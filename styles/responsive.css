@@ -118,10 +118,9 @@
 
     /*skills*/
     .skills-section {
-        justify-content: space-between;
-        font-size: xxx-large;
+        gap: 24px;
     }
-
+    
     /*aboutme*/
     .about-me-profile {
         text-align: left;
