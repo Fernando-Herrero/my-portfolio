@@ -146,16 +146,6 @@ body {
 	border-bottom: 1px solid var(--contrast-color);
 }
 
-.profile-picture-container {
-	width: 200px;
-	height: 200px;
-	overflow: hidden;
-	border-radius: 50%;
-	animation: profilepic 2s ease 0s 1 normal forwards;
-}
-
-.profile-picture {}
-
 @keyframes profilepic {
 	0% {
 		opacity: 0;
@@ -168,9 +158,17 @@ body {
 	}
 }
 
+.profile-picture-container {
+	width: 200px;
+	height: 200px;
+	animation: profilepic 2s ease 0s 1 normal forwards;
+}
+
 .profile-picture img {
 	width: 100%;
-	transform: translatey(-30px);
+	max-height: 200px;
+	max-width: 200px;
+	border-radius: 50%;
 }
 
 .header-text {
