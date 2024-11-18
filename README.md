@@ -13,7 +13,6 @@ Mi resultado: [Live Preview](https://fernando-herrero.netlify.app)
 ## Tecnologías Usadas
 - **HTML5** - Para la estructura semántica del sitio.
 - **CSS3 (Flexbox, Grid)** - Para el diseño adaptable y posicionamiento de elementos.
-- **SASS (opcional)** - Para optimización y reutilización del código CSS.
 - **Google Fonts** - Tipografías personalizadas para un diseño profesional.
 - **CSS Variables** - Uso de variables para mantener consistencia en colores y estilos.
 
