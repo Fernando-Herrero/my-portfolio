@@ -10,7 +10,7 @@ body {
 		"Segoe UI", Roboto, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
 		"Segoe UI Symbol";
 
-	scroll-behavior: smooth;	
+	scroll-behavior: smooth;
 }
 
 h1,
@@ -91,11 +91,11 @@ body {
 	justify-content: space-between;
 	align-items: center;
 	position: fixed;
-    top: 16px;
-    padding: 12px 24px;
-    border-radius: 50px;
-    z-index: 100;
-    backdrop-filter: blur(20px);
+	top: 16px;
+	padding: 12px 24px;
+	border-radius: 50px;
+	z-index: 100;
+	backdrop-filter: blur(20px);
 	background-color: rgba(255, 255, 255, 0.2);
 }
 
@@ -184,6 +184,12 @@ body {
 	gap: 16px;
 }
 
+.contact-me a:hover {
+	transform: scale(1.1);
+	transition-duration: 0.5s;
+	transition-timing-function: ease-in-out;
+}
+
 .get-in-touch {
 	display: flex;
 	align-items: center;
@@ -254,6 +260,11 @@ body {
 	border: 1px solid var(--contrast-color);
 	border-radius: 8px;
 	max-width: 450px;
+}
+
+.project:hover {
+	transform: scale(1.1);
+	transition: all 0.4s ease-in-out 0s;
 }
 
 .project-picture {
@@ -335,7 +346,6 @@ body {
 	min-width: 150px;
 }
 
-
 /*about-me*/
 .about-me-profile {
 	display: flex;
@@ -347,6 +357,12 @@ body {
 	display: flex;
 	justify-content: center;
 	gap: 16px;
+}
+
+.about-me-links a:hover {
+	transform: scale(1.1);
+	transition-duration: 0.5s;
+	transition-timing-function: ease-in-out;
 }
 
 /*contact*/
@@ -384,15 +400,16 @@ body {
 	font-size: 18px;
 }
 
-.connect-contact input, .connect-contact textarea {
+.connect-contact input,
+.connect-contact textarea {
 	background-color: var(--contrast-color);
 	width: 100%;
 	border: none;
-    outline: none;
-    padding: 12px 20px;
-    border-radius: 50px;
-    font-size: 18px;
-    color: darkslategray;
+	outline: none;
+	padding: 12px 20px;
+	border-radius: 50px;
+	font-size: 18px;
+	color: darkslategray;
 	font-family: monospace;
 }
 
@@ -415,8 +432,8 @@ body {
 
 .connect-contact button:hover {
 	transform: scale(1.1);
-    transition-duration: 0.5s;
-    transition-timing-function: ease-in-out;
+	transition-duration: 0.5s;
+	transition-timing-function: ease-in-out;
 }
 
 .big-letter {
@@ -438,4 +455,8 @@ body {
 	gap: 16px;
 }
 
-
+.icons-footer a:hover {
+	transform: scale(1.1);
+	transition-duration: 0.5s;
+	transition-timing-function: ease-in-out;
+}
