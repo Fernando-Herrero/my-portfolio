@@ -6,9 +6,11 @@ Este proyecto consiste en la creación de mi **portfolio personal**, una página
 El objetivo es desarrollar un diseño adaptable, bien estructurado y visualmente atractivo que refleje mis conocimientos en HTML, CSS y diseño responsive.
 
 ## Live Preview
-![Captura pagina inicial](/docs/portfolioweb.png) 
 
-Mi resultado: [Live Preview](https://fernando-herrero.netlify.app)
+
+Enlace directo: [Live Preview](https://fernando-herrero.netlify.app)
+
+![Captura pagina inicial](/docs/portfolioweb.png) 
 
 ## Tecnologías Usadas
 - **HTML5** - Para la estructura semántica del sitio.
@@ -18,8 +20,8 @@ Mi resultado: [Live Preview](https://fernando-herrero.netlify.app)
 
 ## Buenas Prácticas Aplicadas
 - **Mobile First**: Diseño inicial optimizado para dispositivos móviles, escalando a pantallas más grandes.
-- **Arquitectura CSS con BEM**: Organización clara y escalable de clases CSS.
-- **Código reutilizable y limpio**: Uso de variables, mixins (si aplica SASS), y una estructura bien organizada.
+- **Arquitectura CSS**: Organización clara y escalable de clases CSS.
+- **Código reutilizable y limpio**: Uso de variables, mixins, y una estructura bien organizada.
 - **Uso combinado de Flexbox y Grid**: Implementación estratégica para lograr un diseño flexible y versátil.
 - **Paleta de colores profesional**: Elección de colores con buen contraste y enfoque en la accesibilidad.
 
