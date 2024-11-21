@@ -20,10 +20,6 @@
 		left: 16px;
 	}
 
-	.menu-hamburguer-container input:checked ~ ul {
-		padding-left: 90vw;
-	}
-
 	.header {
 		flex-direction: row;
 		text-align: left;
