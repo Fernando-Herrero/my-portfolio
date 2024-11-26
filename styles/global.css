@@ -185,12 +185,6 @@ body {
 	gap: 16px;
 }
 
-.contact-me a:hover {
-	transform: scale(1.1);
-	transition-duration: 0.5s;
-	transition-timing-function: ease-in-out;
-}
-
 .get-in-touch {
 	display: flex;
 	align-items: center;
@@ -201,7 +195,12 @@ body {
 	border: 1px solid var(--text-color);
 }
 
-.get-in-touch:hover {
+.animate {
+	transition-duration: 0.5s;
+	transition-timing-function: ease-in-out;
+}
+
+.animate:hover {
 	transform: scale(1.1);
 	transition-duration: 0.5s;
 	transition-timing-function: ease-in-out;
@@ -261,11 +260,6 @@ body {
 	border: 1px solid var(--contrast-color);
 	border-radius: 8px;
 	max-width: 450px;
-}
-
-.project:hover {
-	transform: scale(1.1);
-	transition: all 0.4s ease-in-out 0s;
 }
 
 .project-picture {
@@ -360,12 +354,6 @@ body {
 	gap: 16px;
 }
 
-.about-me-links a:hover {
-	transform: scale(1.1);
-	transition-duration: 0.5s;
-	transition-timing-function: ease-in-out;
-}
-
 /*contact*/
 .connect {
 	border-bottom: none;
@@ -431,12 +419,6 @@ body {
 	margin-top: 16px;
 }
 
-.connect-contact button:hover {
-	transform: scale(1.1);
-	transition-duration: 0.5s;
-	transition-timing-function: ease-in-out;
-}
-
 .big-letter {
 	font-size: 42px;
 }
@@ -454,10 +436,4 @@ body {
 	display: flex;
 	align-items: center;
 	gap: 16px;
-}
-
-.icons-footer a:hover {
-	transform: scale(1.1);
-	transition-duration: 0.5s;
-	transition-timing-function: ease-in-out;
 }
