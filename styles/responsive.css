@@ -3,93 +3,96 @@
 		--container-width: 85%;
 	}
 
+	/* Tipografía escalable */
 	h1 {
-		font-size: 42px;
+		font-size: clamp(2.5rem, 4vw, 3rem);
 	}
-
 	h2 {
-		font-size: 36px;
+		font-size: clamp(1.75rem, 3vw, 2.25rem);
 	}
-
 	h3 {
-		font-size: 32px;
+		font-size: clamp(1.5rem, 2.5vw, 2rem);
 	}
 
 	.main-navbar {
-		right: 16px;
-		left: 16px;
+		left: 50%;
+		transform: translateX(-50%);
+		width: var(--container-width);
+		padding: 0.75rem 2rem;
 	}
 
 	.header {
 		flex-direction: row;
+		align-items: center;
 		text-align: left;
-		gap: 32px;
+		gap: clamp(2rem, 5vw, 4rem);
+		margin-top: 8rem;
 	}
 
 	@keyframes profilepic {
 		0% {
 			opacity: 0;
-			transform: translateX(-250px);
+			transform: translateX(-5vw) scale(0.95);
 		}
-
 		100% {
 			opacity: 1;
-			transform: translateX(0);
+			transform: translateX(0) scale(1);
 		}
 	}
 
 	.profile-picture-container {
-		display: flex;
-		justify-content: center;
-		flex: 1;
-		width: 100%;
-		height: 100%;
-		animation: profilepic 2s ease 0s 1 normal forwards;
-	}
-
-	.profile-picture img {
-		width: 100%;
+		flex: 0 0 clamp(200px, 30vw, 300px);
+		animation: profilepic 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 	}
 
 	.header-text {
 		flex: 1;
-		gap: 36px;
+		gap: 1.5rem;
 	}
 
 	.contact-me {
-		display: flex;
-		align-items: center;
 		justify-content: flex-start;
-		gap: 16px;
-	}
-
-	.contact-icons {
-		font-size: xx-large;
-	}
-
-	/*project*/
-	.main-section {
-		align-items: flex-start;
-		gap: 42px;
+		gap: 1.5rem;
 	}
 
 	.project {
 		flex-direction: row;
-		align-items: center;
+		align-items: flex-start;
 		text-align: left;
-		max-width: max-content;
+		max-width: 100%;
+		height: auto;
+		padding: 1.5rem;
+		gap: 2rem;
 	}
 
 	.project-picture {
-		flex: 4;
+		flex: 1;
+		height: 250px;
+		min-width: 300px;
+		transition: height 0.4s ease;
+	}
+
+	.project.expanded .project-picture {
+		height: 400px;
 	}
 
 	.project-text {
-		flex: 6;
+		flex: 1;
+		padding: 0;
+		min-width: 50%;
 	}
 
-	.ancors-github-project {
-		justify-content: flex-start;
+	.contact-icons:hover {
+		transform: translateY(-3px);
+	}
+
+	.get-in-touch:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 4px 8px rgba(139, 252, 119, 0.2);
+	}
+
+	.read-more-btn {
+		margin-top: 1rem;
 	}
 
 	/*experience*/
