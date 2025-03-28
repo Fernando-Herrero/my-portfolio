@@ -2,8 +2,6 @@
 *::before,
 *::after {
 	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
 }
 
 html {
@@ -574,7 +572,7 @@ body {
 	flex-wrap: wrap;
 }
 
-/* ====== CONTACT FORM ====== */ 
+/* ====== CONTACT FORM ====== */
 .connect {
 	padding: 2rem 1rem;
 	background: rgba(10, 10, 10, 0.7);
@@ -677,17 +675,40 @@ body {
 	border-color: var(--accent-color);
 }
 
-/*footer*/
-.footer {
+/* ====== FOOTER ====== */
+.footer.container {
 	display: flex;
-	justify-content: space-between;
+	flex-direction: column;
 	align-items: center;
-	margin-top: 40px;
-	margin-bottom: 20px;
+	gap: 1.5rem;
+	padding: 2rem 1rem;
+	margin-top: 3rem;
+	border-top: 1px solid rgba(106, 237, 138, 0.3);
+	position: relative;
+}
+
+.footer p {
+	font-size: 1.1rem;
+	color: var(--text-color);
+	order: 2;
+	margin: 0;
+	position: relative;
+	padding-top: 1.5rem;
 }
 
 .icons-footer {
 	display: flex;
-	align-items: center;
-	gap: 16px;
+	gap: 1.8rem;
+	order: 1;
+}
+
+.contact-icons {
+	font-size: 1.8rem;
+	transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	position: relative;
+}
+
+.icons-footer a:hover .contact-icons {
+	transform: translateY(-5px) scale(1.15);
+	filter: drop-shadow(0 4px 8px rgba(106, 237, 138, 0.4));
 }
