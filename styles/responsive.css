@@ -119,9 +119,26 @@
 		padding-left: 1rem;
 	}
 
-	/*skills*/
+	/* ====== SKILLS ====== */
 	.skills-section {
-		gap: 24px;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1.5rem;
+		padding: 5rem 2rem 0 2rem;
+	}
+
+	.skills-content {
+		padding: 1.5rem 0.5rem;
+		min-height: 160px; /* Altura uniforme */
+	}
+
+	.skills-content:hover {
+		transform: none; /* Evitar movimientos en tablet */
+		background: rgba(106, 237, 138, 0.05);
+	}
+
+	.skills-section img {
+		width: 50px;
+		height: 50px;
 	}
 
 	/*aboutme*/
@@ -227,6 +244,7 @@
 		display: flex;
 	}
 
+	/* ====== PROJECTS SECTION ====== */
 	.project-picture {
 		min-height: 350px;
 		max-height: none;
@@ -249,6 +267,7 @@
 		filter: drop-shadow(0 3px 5px rgba(139, 252, 119, 0.3));
 	}
 
+	/* ====== EXPERIENCE ====== */
 	.experience {
 		align-items: center;
 		padding-top: 5rem;
@@ -274,13 +293,72 @@
 	.experience-title p {
 		padding-left: 2rem;
 	}
+
+	/* ====== SKILLS ====== */
+	.skills-section {
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 2rem;
+		padding: 5rem 5% 0 5%;
+		max-width: 1400px;
+		margin: 0 auto;
+	}
+
+	.skills-content {
+		padding: 2rem 1rem;
+		border-radius: 16px;
+		transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+		min-height: 180px;
+	}
+
+	.skills-section img {
+		width: 70px;
+		height: 70px;
+		margin-bottom: 1rem;
+		filter: grayscale(30%) brightness(0.9);
+		transition: all 0.4s ease;
+	}
+
+	.skills-content:hover {
+		transform: translateY(-8px);
+		background: rgba(106, 237, 138, 0.08);
+		border: 1px solid rgba(106, 237, 138, 0.3);
+		box-shadow: 0 12px 20px -8px rgba(106, 237, 138, 0.15);
+	}
+
+	.skills-content:hover img {
+		filter: grayscale(0%) brightness(1.1);
+		transform: scale(1.15);
+	}
+
+	.skills-content p {
+		font-size: 1.1rem;
+		position: relative;
+		padding-top: 0.8rem;
+	}
+
+	.skills-content p::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 40px;
+		height: 3px;
+		background: var(--accent-color);
+		opacity: 0;
+		transition: opacity 0.3s ease;
+	}
+
+	.skills-content:hover p::before {
+		opacity: 1;
+	}
 }
 
 /* Media query para dispositivos de escritorio XXL (mayores a 1440px) */
 @media (min-width: 1440px) {
 	:root {
-		--container-width: min(1400px, 80%); 
-		--section-spacing: 6rem 0; 
+		--container-width: min(1400px, 80%);
+		--section-spacing: 6rem 0;
 	}
 
 	.header {
@@ -288,7 +366,7 @@
 	}
 
 	.main-navbar {
-		padding: 1rem 3rem; 
+		padding: 1rem 3rem;
 	}
 
 	.ancors-main-navbar,
@@ -311,6 +389,7 @@
 		border-width: 4px;
 	}
 
+	/* ====== PROJECTS ====== */
 	.projects {
 		display: grid;
 		grid-template:
@@ -375,6 +454,7 @@
 		grid-area: netflix;
 	}
 
+	/* ====== EXPERIENCE ====== */
 	.experience-title-date {
 		flex-direction: row;
 		align-items: center;
@@ -393,5 +473,79 @@
 
 	.experience-title p {
 		padding-left: 2rem;
+	}
+
+	/* ====== SKILLS ====== */
+	.skills-section {
+		grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+		gap: 2.5rem;
+		max-width: 1600px;
+		margin: 0 auto;
+	}
+
+	.skills-content {
+		padding: 2.5rem 1.5rem;
+		min-height: 220px;
+		border-radius: 20px;
+		background: linear-gradient(
+			135deg,
+			rgba(255, 255, 255, 0.03) 0%,
+			rgba(10, 10, 10, 0.7) 100%
+		);
+		position: relative;
+		overflow: hidden;
+	}
+
+	/* Efecto de borde sutil al hover */
+	.skills-content::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		border-radius: inherit;
+		padding: 2px;
+		background: linear-gradient(135deg, rgba(106, 237, 138, 0.4), transparent);
+
+		/* Standard Property (Firefox, Edge 16+) */
+		mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+		mask-composite: exclude;
+
+		/* Webkit Prefix (Chrome, Safari) */
+		-webkit-mask: linear-gradient(#fff 0 0) content-box,
+			linear-gradient(#fff 0 0);
+		-webkit-mask-composite: xor;
+
+		pointer-events: none;
+		opacity: 0;
+		transition: opacity 0.4s ease;
+	}
+
+	.skills-content:hover::before {
+		opacity: 1;
+	}
+
+	.skills-section img {
+		width: 80px;
+		height: 80px;
+		margin-bottom: 1.5rem;
+		filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+	}
+
+	.skills-content p {
+		font-size: 1.25rem;
+		font-weight: 600;
+		letter-spacing: 0.5px;
+	}
+
+	/* Efecto de "hover elevado" */
+	.skills-content:hover {
+		transform: translateY(-10px) scale(1.02);
+		box-shadow: 0 25px 40px -15px rgba(106, 237, 138, 0.2);
+		z-index: 2;
+	}
+
+	/* Micro-interacción para el texto */
+	.skills-content:hover p {
+		color: var(--accent-color);
+		text-shadow: 0 0 10px rgba(106, 237, 138, 0.3);
 	}
 }
