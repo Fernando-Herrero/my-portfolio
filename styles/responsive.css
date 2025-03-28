@@ -141,10 +141,36 @@
 		height: 50px;
 	}
 
-	/*aboutme*/
+	/* ====== ABOUT ME ====== */
 	.about-me-profile {
-		text-align: left;
-		padding-left: 15%;
+		padding: 1.5rem 10% 1.5rem 10%;
+		max-width: 900px;
+		position: relative;
+		background: linear-gradient(
+			to right,
+			rgba(10, 10, 10, 0.8) 0%,
+			rgba(10, 10, 10, 0.6) 100%
+		);
+		border-left: 3px solid var(--accent-color);
+		border-radius: 0 12px 12px 0;
+	}
+
+	.about-me-profile::before {
+		content: "";
+		position: absolute;
+		top: -3px;
+		left: 0;
+		width: 50px;
+		height: 50px;
+		border-top: 3px solid var(--accent-color);
+		border-left: 3px solid transparent;
+		border-right: 3px solid transparent;
+	}
+
+	.about-me-links {
+		justify-content: flex-start;
+		gap: 1.5rem;
+		margin-top: 1.5rem;
 	}
 
 	/*connect*/
@@ -352,6 +378,75 @@
 	.skills-content:hover p::before {
 		opacity: 1;
 	}
+
+	/* ====== ABOUT ME ====== */
+	.about-me-profile {
+		display: grid;
+		grid-template-areas:
+			"title title"
+			"text text"
+			"links sign";
+		grid-template-columns: 1fr 1fr;
+		gap: 3rem;
+		padding: 3rem 10%;
+		max-width: 1200px;
+		margin: 3rem auto;
+		align-items: center;
+		background: rgba(10, 10, 10, 0.7);
+		border-radius: 16px;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.main-section h2 {
+		display: grid;
+	}
+
+	.about-me-title {
+		grid-area: title;
+	}
+
+	.about-me-text {
+		grid-area: text;
+		max-width: 100ch;
+	}
+
+	.about-me-links {
+		grid-area: links;
+	}
+
+	.about-me-signature {
+		grid-area: sign;
+	}
+
+	.about-me-profile::before {
+		content: "";
+		position: absolute;
+		top: -50%;
+		right: -50%;
+		width: 100%;
+		height: 200%;
+		background: radial-gradient(
+			circle at 70% 50%,
+			rgba(106, 237, 138, 0.08) 0%,
+			transparent 40%
+		);
+		z-index: -1;
+	}
+
+	.about-me-links {
+		gap: 3rem;
+	}
+
+	.about-me-signature {
+		margin-top: 2rem;
+		font-family: "Dancing Script", cursive;
+		font-size: 1.8rem;
+		color: var(--accent-color);
+		opacity: 0.9;
+		text-align: right;
+		padding-right: 1rem;
+	}
 }
 
 /* Media query para dispositivos de escritorio XXL (mayores a 1440px) */
@@ -496,7 +591,6 @@
 		overflow: hidden;
 	}
 
-	/* Efecto de borde sutil al hover */
 	.skills-content::before {
 		content: "";
 		position: absolute;
@@ -536,16 +630,17 @@
 		letter-spacing: 0.5px;
 	}
 
-	/* Efecto de "hover elevado" */
 	.skills-content:hover {
 		transform: translateY(-10px) scale(1.02);
 		box-shadow: 0 25px 40px -15px rgba(106, 237, 138, 0.2);
 		z-index: 2;
 	}
 
-	/* Micro-interacción para el texto */
 	.skills-content:hover p {
 		color: var(--accent-color);
 		text-shadow: 0 0 10px rgba(106, 237, 138, 0.3);
 	}
+
+	/* ====== ABOUT ME ====== */
 }
+
