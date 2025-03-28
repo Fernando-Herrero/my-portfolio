@@ -33,7 +33,6 @@ h3 {
 
 	font-weight: 700;
 	line-height: 1.2;
-	margin-bottom: 1.5rem;
 }
 
 h1 {
@@ -94,7 +93,7 @@ body {
 	margin: 0 auto;
 }
 
-/*navbar*/
+/* ====== NAVBAR ====== */
 .main-navbar {
 	display: flex;
 	justify-content: space-between;
@@ -126,7 +125,6 @@ body {
 	padding-right: 1rem;
 }
 
-/* Efecto subrayado animado */
 .main-navbar p::after {
 	content: "";
 	position: absolute;
@@ -202,7 +200,7 @@ body {
 	display: none;
 }
 
-/* ==================== HEADER ==================== */
+/* ====== HEADER ====== */
 .header {
 	display: flex;
 	flex-direction: column;
@@ -213,6 +211,22 @@ body {
 	padding: 4rem 0;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 	position: relative;
+}
+
+.header::before {
+	content: "";
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 100%;
+	height: 1px;
+	background: linear-gradient(
+		90deg,
+		transparent,
+		rgba(106, 237, 138, 0.5),
+		transparent
+	);
+	bottom: 0;
 }
 
 @keyframes profilepic {
@@ -314,10 +328,26 @@ body {
 	transform: translateY(-3px) scale(1.1);
 }
 
-/* ======== PROJECTS SECTION ======== */
+/* ====== PROJECTS SECTION ====== */
 .main-section {
 	padding: 4rem 0;
-	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	position: relative;
+}
+
+.main-section::before {
+	content: "";
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 100%;
+	height: 1px;
+	background: linear-gradient(
+		90deg,
+		transparent,
+		rgba(106, 237, 138, 0.5),
+		transparent
+	);
+	bottom: 0;
 }
 
 .projects {
@@ -326,10 +356,9 @@ body {
 	gap: 2.5rem;
 	max-width: 1200px;
 	margin: 0 auto;
-	padding: 0 1.5rem;
+	padding: 4rem 1.5rem 0 1.5rem;
 }
 
-/* Contenedor principal con expansión */
 .project {
 	display: flex;
 	flex-direction: column;
@@ -340,7 +369,6 @@ body {
 	overflow: hidden;
 }
 
-/* Imagen con expansión controlada */
 .project-picture {
 	height: 250px;
 	overflow: hidden;
@@ -350,7 +378,7 @@ body {
 }
 
 .project.expanded .project-picture {
-	height: 350px; /* Altura expandida */
+	height: 350px;
 }
 
 .project-picture img {
@@ -423,33 +451,67 @@ body {
 	transform: scale(1.05);
 }
 
-/*experience*/
+/* ====== EXPERIENCE ====== */
 .experience {
 	display: flex;
 	flex-direction: column;
-	gap: 20px;
+	gap: 2.5rem;
+	padding-top: 3rem;
+	position: relative;
 }
 
 .experience-title-date {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	gap: 1.5rem;
+	align-items: flex-start;
+	max-width: 1200px;
+	margin: 0 auto;
+	width: 90%;
 }
 
 .experience-title {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	gap: 16px;
+	gap: 1.25rem;
+	width: 100%;
 }
 
 .experience-title img {
-	width: 80px;
+	width: 5rem;
+	height: 5rem;
 	border-radius: 50%;
+	object-fit: cover;
+	border: 2px solid rgba(106, 237, 138, 0.3);
+	padding: 0.25rem;
+	transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.experience-title img:hover {
+	transform: scale(1.05);
+	border-color: var(--accent-color);
+	box-shadow: 0 6px 12px rgba(106, 237, 138, 0.2);
 }
 
 .experience-title p {
 	color: var(--text-color);
+	font-size: 1.25rem;
+	line-height: 1.4;
+	position: relative;
+	padding-left: 1.5rem;
+}
+
+.experience-title p::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 0.5rem;
+	height: 0.5rem;
+	background-color: var(--accent-color);
+	border-radius: 50%;
 }
 
 /*skills*/
