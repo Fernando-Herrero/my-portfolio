@@ -765,3 +765,162 @@ body {
 	color: var(--contrast-color);
 	line-height: 1.6;
 }
+
+/* ====== LIGHT-MODE ====== */
+body.light-mode {
+	--bg-color: #f8f9fa;
+	--text-color: #333333;
+	--contrast-color: #555555;
+	--accent-color: #2e7d32; /* Verde más oscuro para mejor contraste */
+	--shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+
+	background: radial-gradient(ellipse at 20% 20%, #ffffff 0%, #e0e0e0 70%),
+		radial-gradient(ellipse at 80% 80%, #e8f5e9 0%, transparent 50%);
+	background-blend-mode: overlay;
+}
+
+.theme-toggle {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	z-index: 1000;
+}
+
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+}
+
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: var(--accent-color);
+	transition: 0.4s;
+	border-radius: 34px;
+}
+
+.slider:before {
+	content: "🌙";
+	position: absolute;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	transition: 0.4s;
+	border-radius: 50%;
+	width: 26px;
+	height: 26px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 14px;
+}
+
+input:checked + .slider:before {
+	content: "☀️";
+	transform: translateX(26px);
+}
+
+/* Navbar en light mode */
+body.light-mode .main-navbar {
+	background-color: rgba(255, 255, 255, 0.9);
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .main-navbar.scrolled {
+	background-color: rgba(255, 255, 255, 0.95);
+}
+
+body.light-mode .hamburguer-icon {
+	filter: invert(0);
+}
+
+/* Secciones en light mode */
+body.light-mode .project,
+body.light-mode .about-me-profile,
+body.light-mode .experience-title-date,
+body.light-mode .skills-content {
+	background: rgba(255, 255, 255, 0.9);
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	box-shadow: var(--shadow);
+}
+
+body.light-mode p {
+	color: var(--contrast-color);
+}
+
+body.light-mode .project:hover,
+body.light-mode .skills-content:hover {
+	border-color: var(--accent-color);
+}
+
+/* Formulario en light mode */
+body.light-mode .connect {
+	background: rgba(255, 255, 255, 0.9);
+	border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .connect-contact input,
+body.light-mode .connect-contact textarea {
+	background: rgba(255, 255, 255, 0.95);
+	border: 2px solid rgba(0, 0, 0, 0.1);
+	color: var(--text-color);
+}
+
+/* Footer en light mode */
+body.light-mode .footer.container {
+	border-top: 1px solid rgba(46, 125, 50, 0.3);
+	background: rgba(255, 255, 255, 0.9);
+}
+
+/* Overlay en light mode */
+body.light-mode .form-overlay {
+	background-color: rgba(255, 255, 255, 0.95);
+}
+
+body.light-mode .overlay-content {
+	background: radial-gradient(ellipse at center, #e8f5e9 0%, #ffffff 100%);
+	border: 1px solid var(--accent-color);
+}
+
+/* Ajustes de texto en light mode */
+body.light-mode .main-title {
+	background: linear-gradient(to right, #333333, var(--accent-color));
+	-webkit-background-clip: text;
+}
+
+body.light-mode .big-letter {
+	background: linear-gradient(to right, #333333, var(--accent-color));
+	-webkit-background-clip: text;
+}
+
+/* Separación entre secciones */
+body.light-mode .main-section {
+	background-color: transparent;
+}
+
+body.light-mode .header,
+body.light-mode .main-section {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .header::before,
+body.light-mode .main-section::before {
+	background: linear-gradient(
+		90deg,
+		transparent,
+		rgba(46, 125, 50, 0.3),
+		transparent
+	);
+}

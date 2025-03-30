@@ -81,4 +81,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	trackVisits();
 	handleProjectCards();
 	handleContactForm();
+	applySavedTheme();
+	handleThemeToggle();
 });
