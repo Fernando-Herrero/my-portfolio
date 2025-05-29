@@ -37,9 +37,8 @@ const handleProjectCards = () => {
 					projectCard.scrollIntoView({
 						behavior: "smooth",
 						block: "nearest",
-						inline: "nearest",
 					});
-				}, 350);
+				}, 400);
 			}
 		});
 	});
