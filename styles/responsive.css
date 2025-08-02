@@ -56,31 +56,8 @@
 	}
 
 	/* ====== PROJECTS SECTION ====== */
-	.project {
-		flex-direction: row;
-		align-items: flex-start;
-		text-align: left;
-		max-width: 100%;
-		height: auto;
-		padding: 1.5rem;
-		gap: 2rem;
-	}
-
-	.project-picture {
-		flex: 1;
-		height: 250px;
-		min-width: 200px;
-		transition: height 0.4s ease;
-	}
-
 	.project.expanded .project-picture {
 		height: 400px;
-	}
-
-	.project-text {
-		flex: 1;
-		padding: 0;
-		min-width: 50%;
 	}
 
 	.contact-icons:hover {
@@ -127,11 +104,11 @@
 
 	.skills-content {
 		padding: 1.5rem 0.5rem;
-		min-height: 160px; /* Altura uniforme */
+		min-height: 160px;
 	}
 
 	.skills-content:hover {
-		transform: none; /* Evitar movimientos en tablet */
+		transform: none;
 		background: rgba(106, 237, 138, 0.05);
 	}
 
@@ -327,25 +304,11 @@
 	}
 
 	.profile-picture-container {
-		flex: 0 0 clamp(250px, 30vw, 320px);
 		height: 100%;
 		display: flex;
 	}
 
 	/* ====== PROJECTS SECTION ====== */
-	.project-picture {
-		min-height: 350px;
-		max-height: none;
-	}
-
-	.project.expanded .project-picture {
-		height: 500px;
-	}
-
-	.project-text {
-		padding: 2rem;
-	}
-
 	.contact-icons {
 		transition: all 0.3s ease;
 	}
@@ -550,7 +513,7 @@
 
 	.connect-contact form {
 		display: grid;
-		grid-template-columns: 1fr 3fr; /* Segunda columna casi el doble */
+		grid-template-columns: 1fr 3fr; 
 		grid-template-areas:
 			"name-label subject-label"
 			"name-input subject-input"
@@ -687,7 +650,6 @@
 	}
 }
 
-/* Media query para dispositivos de escritorio XXL (mayores a 1440px) */
 @media (min-width: 1440px) {
 	:root {
 		--container-width: min(1400px, 80%);
@@ -717,8 +679,6 @@
 	}
 
 	.profile-picture-container {
-		width: 350px;
-		height: 350px;
 		border-width: 4px;
 	}
 
@@ -745,7 +705,7 @@
 	}
 
 	.project-picture {
-		height: 280px; /* Altura más compacta para 3 columnas */
+		height: 280px;
 	}
 
 	.project.expanded .project-picture {
@@ -754,7 +714,7 @@
 
 	.project-text {
 		flex: 0;
-		padding: 0;
+		padding: 1rem;
 	}
 
 	.read-more-btn {
