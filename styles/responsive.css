@@ -42,7 +42,6 @@
 	}
 
 	.profile-picture-container {
-		flex: 0 0 clamp(200px, 30vw, 300px);
 		animation: profilepic 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 	}
 

@@ -350,12 +350,32 @@ body {
 }
 
 .projects {
-	display: grid;
-	grid-template-columns: 1fr;
+	display: flex;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	scroll-padding: 0 1rem;
 	gap: 2.5rem;
 	max-width: 1200px;
 	margin: 0 auto;
-	padding: 4rem 1.5rem 0 1.5rem;
+	padding: 4rem 2rem;
+}
+
+.projects::-webkit-scrollbar {
+	height: 8px;
+}
+
+.projects::-webkit-scrollbar-track {
+	background: #1f1f1f;
+	border-radius: 10px;
+}
+
+.projects::-webkit-scrollbar-thumb {
+	background-color: var(--accent-color);
+	border-radius: 10px;
+}
+
+.projects::-webkit-scrollbar-thumb:hover {
+	background-color: #2cad4c;
 }
 
 .project {
@@ -366,6 +386,8 @@ body {
 	border-radius: var(--radius-md);
 	transition: all 0.4s ease;
 	overflow: hidden;
+	min-width: 80vw;
+	scroll-snap-align: center;
 }
 
 .project-picture {
@@ -897,7 +919,7 @@ body.light-mode .big-letter {
 	background-clip: text;
 	color: transparent;
 	-webkit-text-fill-color: transparent;
-	display: inline-block; 
+	display: inline-block;
 }
 
 body.light-mode .main-section {
