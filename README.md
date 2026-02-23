@@ -10,7 +10,7 @@ El objetivo es desarrollar un diseño adaptable, bien estructurado y visualmente
 
 Enlace directo: [Live Preview](https://fernando-herrero.netlify.app)
 
-![Captura pagina inicial](/Users/fernando/Desktop/imagen.png) 
+![Captura pagina inicial](/docs/image-portfolio.png) 
 
 ## Tecnologías Usadas
 - **HTML5** - Para la estructura semántica del sitio.
