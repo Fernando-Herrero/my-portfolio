@@ -18,19 +18,34 @@ const trackVisits = () => {
 const handleProjectCards = () => {
 	document.querySelectorAll(".read-more-btn").forEach((btn) => {
 		const projectCard = btn.closest(".project");
-		const porjectId = projectCard.id || projectCard.dataset.id;
-		const savedState = loadFromStorage(`Project_${porjectId}`);
+		const projectId = projectCard.id || projectCard.dataset.id;
+		
+		if (!projectId) {
+			console.warn("Project card without ID found:", projectCard);
+			return;
+		}
+
+		const savedState = loadFromStorage(`project_${projectId}`);
 
 		if (savedState?.expanded) {
 			projectCard.classList.add("expanded");
-			btn.firstChild.textContent = "Read less";
+			const textNode = btn.childNodes[0];
+			if (textNode && textNode.nodeType === Node.TEXT_NODE) {
+				textNode.textContent = "Read less ";
+			}
 		}
 
-		btn.addEventListener("click", () => {
+		btn.addEventListener("click", (e) => {
+			e.stopPropagation();
+			
 			const isExpanded = projectCard.classList.toggle("expanded");
 
-			btn.firstChild.textContent = isExpanded ? "Read less" : "Read more";
-			saveToStorage(`Project_${porjectId}`, { expanded: isExpanded });
+			const textNode = btn.childNodes[0];
+			if (textNode && textNode.nodeType === Node.TEXT_NODE) {
+				textNode.textContent = isExpanded ? "Read less " : "Read more ";
+			}
+			
+			saveToStorage(`project_${projectId}`, { expanded: isExpanded });
 
 			if (isExpanded) {
 				setTimeout(() => {

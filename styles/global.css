@@ -10,11 +10,21 @@ html {
 }
 
 body {
-	font-family: "Libre Caslon Text", Helvetica, -apple-system, BlinkMacSystemFont,
-		"Segoe UI", Roboto, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+	font-family:
+		"Libre Caslon Text",
+		Helvetica,
+		-apple-system,
+		BlinkMacSystemFont,
+		"Segoe UI",
+		Roboto,
+		Arial,
+		sans-serif,
+		"Apple Color Emoji",
+		"Segoe UI Emoji",
 		"Segoe UI Symbol";
 
-	background: radial-gradient(ellipse at 20% 20%, #0a0a0a 0%, #000000 70%),
+	background:
+		radial-gradient(ellipse at 20% 20%, #0a0a0a 0%, #000000 70%),
 		radial-gradient(ellipse at 80% 80%, #142b15 0%, transparent 50%);
 	background-blend-mode: screen;
 	color: var(--text-color);
@@ -25,9 +35,19 @@ body {
 h1,
 h2,
 h3 {
-	font-family: "EB Garamond", Serif, Helvetica, -apple-system,
-		BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif,
-		"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-family:
+		"EB Garamond",
+		Serif,
+		Helvetica,
+		-apple-system,
+		BlinkMacSystemFont,
+		"Segoe UI",
+		Roboto,
+		Arial,
+		sans-serif,
+		"Apple Color Emoji",
+		"Segoe UI Emoji",
+		"Segoe UI Symbol";
 
 	font-weight: 700;
 	line-height: 1.2;
@@ -44,7 +64,7 @@ h2 {
 }
 
 h3 {
-	font-size: 1.75rem;
+	font-size: 1.5rem;
 }
 
 p {
@@ -390,7 +410,9 @@ body {
 	min-width: 300px;
 	max-width: 500px;
 	scroll-snap-align: center;
-	min-height: 560px;
+	height: fit-content;
+	flex-shrink: 0;
+	align-self: flex-start;
 }
 
 .project-picture {
@@ -416,6 +438,7 @@ body {
 	padding: 0 1.5rem;
 	display: flex;
 	flex-direction: column;
+	flex: 1;
 }
 
 .project-text h3 {
@@ -433,7 +456,7 @@ body {
 	text-overflow: ellipsis;
 	line-height: 1.6;
 	transition: all 0.4s ease;
-	padding: 20px 0;
+	padding: 10px 0;
 	margin: 0;
 }
 
@@ -447,6 +470,8 @@ body {
 	display: flex;
 	align-items: center;
 	gap: 10px;
+	margin-top: auto;
+	padding-bottom: 1rem;
 }
 
 .read-more-btn {
@@ -806,7 +831,8 @@ body.light-mode {
 	--accent-color: #2e7d32;
 	--shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 
-	background: radial-gradient(ellipse at 20% 20%, #ffffff 0%, #e0e0e0 70%),
+	background:
+		radial-gradient(ellipse at 20% 20%, #ffffff 0%, #e0e0e0 70%),
 		radial-gradient(ellipse at 80% 80%, #e8f5e9 0%, transparent 50%);
 	background-blend-mode: overlay;
 }
