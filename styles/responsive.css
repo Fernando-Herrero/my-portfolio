@@ -845,6 +845,30 @@
 		text-shadow: 0 0 10px rgba(106, 237, 138, 0.3);
 	}
 
+	.skills-content.locked {
+		opacity: 0.45;
+		filter: grayscale(100%);
+		background: #1a1a1a;
+		border: 1px solid #2a2a2a;
+		cursor: default;
+		transform: none;
+		transition: none;
+	}
+
+	.skills-content.locked:hover {
+		transform: none;
+		box-shadow: none;
+		background: #1a1a1a;
+	}
+
+	.skills-content.locked p {
+		color: #777;
+	}
+
+	.skills-content.locked img {
+		filter: grayscale(100%) brightness(0.7);
+	}
+
 	/* ====== CONTACT FORM ====== */
 	.connect {
 		max-width: 1400px;
