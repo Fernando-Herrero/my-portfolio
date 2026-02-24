@@ -4,6 +4,8 @@ const STORAGE_KEYS = {
 	FORM_DATA: "portfolio_form_data",
 };
 
+const SCROLL_THRESHOLD = 80;
+
 const trackVisits = () => {
 	let visits = loadFromStorage(STORAGE_KEYS.VISITS) || {
 		count: 0,
@@ -19,7 +21,7 @@ const handleProjectCards = () => {
 	document.querySelectorAll(".read-more-btn").forEach((btn) => {
 		const projectCard = btn.closest(".project");
 		const projectId = projectCard.id || projectCard.dataset.id;
-		
+
 		if (!projectId) {
 			console.warn("Project card without ID found:", projectCard);
 			return;
@@ -37,14 +39,14 @@ const handleProjectCards = () => {
 
 		btn.addEventListener("click", (e) => {
 			e.stopPropagation();
-			
+
 			const isExpanded = projectCard.classList.toggle("expanded");
 
 			const textNode = btn.childNodes[0];
 			if (textNode && textNode.nodeType === Node.TEXT_NODE) {
 				textNode.textContent = isExpanded ? "Read less " : "Read more ";
 			}
-			
+
 			saveToStorage(`project_${projectId}`, { expanded: isExpanded });
 
 			if (isExpanded) {
@@ -92,6 +94,39 @@ const handleContactForm = () => {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
+	const navbar = document.querySelector(".main-navbar");
+
+	window.addEventListener(
+		"scroll",
+		() => {
+			if (!navbar) return;
+			if (window.scrollY > SCROLL_THRESHOLD) {
+				navbar.classList.add("scrolled");
+			} else {
+				navbar.classList.remove("scrolled");
+			}
+		},
+		{ passive: true },
+	);
+
+	const elements = document.querySelectorAll(".reveal");
+
+	const observer = new IntersectionObserver(
+		(entries) => {
+			entries.forEach((entry, index) => {
+				if (entry.isIntersecting) {
+					entry.target.style.transitionDelay = `${index * 100}ms`;
+					entry.target.classList.add("show");
+				}
+			});
+		},
+		{ threshold: 0.15 },
+	);
+
+	elements.forEach((el) => {
+		observer.observe(el);
+	});
+
 	trackVisits();
 	handleProjectCards();
 	handleContactForm();

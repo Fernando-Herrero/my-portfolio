@@ -255,18 +255,12 @@
 	.main-navbar {
 		margin: 2rem auto;
 		padding: 0.75rem 2rem;
-		backdrop-filter: blur(12px);
-		background: rgba(0, 0, 0, 0.7);
-		border: 1px solid rgba(255, 255, 255, 0.1);
-		transition:
-			transform 0.3s ease,
-			box-shadow 0.3s ease;
 	}
 
 	.main-navbar.scrolled {
-		margin: 0 auto;
-		transform: translateY(10px);
 		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+		backdrop-filter: blur(12px);
+		border: 1px solid rgba(255, 255, 255, 0.1);
 	}
 
 	.ancors-icons-nav {
