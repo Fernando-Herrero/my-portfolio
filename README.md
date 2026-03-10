@@ -1,4 +1,4 @@
-# Portfolio Personal - Proyecto Final del Módulo de CSS
+# Portfolio Personal
 
 ## Descripción
 Este proyecto consiste en la creación de mi **portfolio personal**, una página web estilizada donde muestro mis trabajos y habilidades en desarrollo web. Este sitio no solo representa mi aprendizaje y experiencia, sino que también servirá como parte de mi currículum para encontrar empleo en el sector tecnológico.
