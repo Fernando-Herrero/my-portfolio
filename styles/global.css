@@ -223,6 +223,10 @@ body {
 	display: none;
 }
 
+.ancors-main-navbar.scrolled a {
+	color: var(--accent-color);
+}
+
 /* ====== HEADER ====== */
 .header {
 	display: flex;
