@@ -95,16 +95,16 @@ const handleContactForm = () => {
 
 document.addEventListener("DOMContentLoaded", () => {
 	const navbar = document.querySelector(".main-navbar");
+	const ancorsNavbar = document.querySelectorAll(".ancors-main-navbar a");
 
 	window.addEventListener(
 		"scroll",
 		() => {
 			if (!navbar) return;
-			if (window.scrollY > SCROLL_THRESHOLD) {
-				navbar.classList.add("scrolled");
-			} else {
-				navbar.classList.remove("scrolled");
-			}
+			const addClass = window.scrollY > SCROLL_THRESHOLD;
+
+			navbar.classList.toggle("scrolled", addClass);
+			ancorsNavbar.forEach((a) => a.classList.toggle("scrolled", addClass));
 		},
 		{ passive: true },
 	);
