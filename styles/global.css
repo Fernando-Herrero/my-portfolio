@@ -223,7 +223,7 @@ body {
 	display: none;
 }
 
-.ancors-main-navbar.scrolled a {
+.ancors-main-navbar a.scrolled {
 	color: var(--accent-color);
 }
 
